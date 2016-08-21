@@ -1,0 +1,49 @@
+{
+	"build_systems":
+	[
+		{
+			"name" : "GP C++ Compiler",
+    		"cmd": 
+    		[
+    		"g++",
+    		"${file}",// gameFile.cpp
+    		"${file_path}\\GameScripts\\*.cpp", // To compile all game files "*.cpp" at once.
+    		"-o" ,"${file_base_name}", // to produce the ".exe".
+    		"-I${file_path}\\libs", // To include external libraries originals.
+    		"-L${file_path}\\static libs", // To use the static libraries been made by CMake.exe.
+		    "-lBox2D",
+		    "-lopenal32",
+		    "-lsfml-main",
+		    "-lsfml-system",
+		    "-lsfml-window",
+		    "-lsfml-graphics",
+		    "-lsfml-audio",
+		    "-lsfml-network",
+		    "-lvorbis",
+		    "-lvorbisenc",
+		    "-lvorbisfile",
+		    "-lFLAC",
+		    "-lfreetype",
+		    "-ljpeg",
+		    "-logg"
+		    ],
+		    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+		    "working_dir": "${file_path}",
+		    "selector": "source.c, source.c++, source.cpp",
+		    "shell": true,
+
+		    "windows":
+		    [
+		        {
+		            "name": "Run",
+		            "shell": true,
+		            "cmd": ["start", "${file_base_name}"],
+		            "working_dir": "${file_path}",
+		            "selector": "source.c++, source.cpp",
+		        }
+		    ]
+		}
+	]
+
+	
+}
