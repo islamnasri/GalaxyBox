@@ -2,15 +2,16 @@
 #include <iomanip>
 #include <SFML/Graphics.hpp>
 #include "WindowController.h"
+#include "GameConstants.h"
 
 using namespace std;
 using namespace sf;
 using namespace GalaxyBox;
 
-void WindowC::InitWindow()
+void WindowController::InitWindow()
 {
    // Window creation
-   GameWindow.create(VideoMode(windowSizeX, windowSizeY), "SFML with Box2D");
+   GameWindow.create(VideoMode(WINDOW_SIZE_X, WINDOW_SIZE_Y), "SFML with Box2D");
 
   // Set vSync to true (and as a result, we have a cap of 60FPS)
   GameWindow.setVerticalSyncEnabled(true);
@@ -19,17 +20,50 @@ void WindowC::InitWindow()
   // Rendering
   GameWindow.clear(Color(100, 149, 237)); // CORNFLOWER BLUE!
 
-  // Create gravity and world, then assign gravity to world
-  b2Vec2 gravity(0.f, 9.81f);
-  b2World world(gravity);
+  GameWindow.setPosition(Vector2i(50,50));
 }
 
-void WindowC::Draw(const Drawable &obj)
+void WindowController::Draw(const Drawable &obj)
 {
   GameWindow.draw(obj);
 }
 
-void WindowC::Update()
+
+bool WindowController::IsRunning()
+{
+  return GameWindow.isOpen();
+}
+
+void WindowController::Begin()
+{
+    Event event;
+    while (GameWindow.pollEvent(event));
+    {
+      // This is input handling via poll event
+      // Do not use this for game input
+      // Why? Delay issues
+      // READ SFML DOCUMENTATION!
+        if(event.type == Event::Closed)
+        {
+          GameWindow.close();
+          cout << "Closing Window" << endl;
+          //system("pause");
+        }
+    }  
+}
+
+void WindowController::Update()
+{
+    // Rendering
+    GameWindow.clear(Color::Black); // CORNFLOWER BLUE!
+}
+
+void WindowController::End()
 {
     GameWindow.display();
+}
+
+RenderWindow& WindowController::Get()
+{
+  return GameWindow;
 }

@@ -6,6 +6,7 @@
     		"cmd": 
     		[
     		"g++",
+    		//"-std=c++11",
     		"${file}",// gameFile.cpp
     		"${file_path}\\GameScripts\\*.cpp", // To compile all game files "*.cpp" at once.
     		"-o" ,"${file_base_name}", // to produce the ".exe".

@@ -4,12 +4,100 @@
 		"selected_items":
 		[
 			[
-				"upda",
-				"Update"
+				"get",
+				"GetAngle"
+			],
+			[
+				"pixe",
+				"PIXEL_PER_METER"
+			],
+			[
+				"move",
+				"moveFromCenter"
+			],
+			[
+				"Get",
+				"GetAngle"
+			],
+			[
+				"r",
+				"RBlock"
+			],
+			[
+				"Inc",
+				"include"
+			],
+			[
+				"game",
+				"gameWindow"
+			],
+			[
+				"Scree",
+				"SCREEN_CENTER_Y"
+			],
+			[
+				"scree",
+				"SCREEN_CENTER_Y"
+			],
+			[
+				"wind",
+				"WINDOW_SIZE_X"
+			],
+			[
+				"screen",
+				"SCREEN_CENTER_Y"
+			],
+			[
+				"window",
+				"WINDOW_SIZE_Y"
+			],
+			[
+				"WIndo",
+				"WINDOW_SIZE_Y"
+			],
+			[
+				"vec",
+				"vector	std::vector"
+			],
+			[
+				"border",
+				"borderSize"
+			],
+			[
+				"WINDOW",
+				"WINDOW_SIZE_X"
+			],
+			[
+				"Wi",
+				"WINDOW_SIZE_X"
 			],
 			[
 				"Window",
-				"WindowC"
+				"WINDOW_SIZE_Y"
+			],
+			[
+				"player",
+				"PlayerController"
+			],
+			[
+				"vector",
+				"vector	std::vector"
+			],
+			[
+				"ti",
+				"timeElapsedSinceLastFrame"
+			],
+			[
+				"Game",
+				"GameWorld"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"upda",
+				"Update"
 			],
 			[
 				"ma",
@@ -44,42 +132,90 @@
 	"buffers":
 	[
 		{
+			"file": "GameScripts/GameConstants.h",
+			"settings":
+			{
+				"buffer_size": 886,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "GalaxyBox.cpp",
 			"settings":
 			{
-				"buffer_size": 5676,
+				"buffer_size": 2393,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "GameScripts/CharacterCreator.cpp",
+			"file": "GameScripts/PlayerController.h",
 			"settings":
 			{
-				"buffer_size": 1512,
+				"buffer_size": 510,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "GameScripts/CharacterCreator.h",
+			"file": "GameScripts/PlayerController.cpp",
 			"settings":
 			{
-				"buffer_size": 585,
+				"buffer_size": 1730,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "GameScripts/WindowController.cpp",
+			"file": "GameScripts/CharacterController.h",
 			"settings":
 			{
-				"buffer_size": 751,
+				"buffer_size": 838,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "GameScripts/WindowController.h",
+			"file": "GameScripts/CharacterController.cpp",
 			"settings":
 			{
-				"buffer_size": 375,
+				"buffer_size": 3453,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "GameScripts/Pillar.h",
+			"settings":
+			{
+				"buffer_size": 565,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "GameScripts/Pillar.cpp",
+			"settings":
+			{
+				"buffer_size": 484,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "GameScripts/WorldController.h",
+			"settings":
+			{
+				"buffer_size": 615,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "GameScripts/WorldController.cpp",
+			"settings":
+			{
+				"buffer_size": 1880,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "GameScripts/GalaxyBox.h",
+			"settings":
+			{
+				"buffer_size": 301,
 				"line_ending": "Windows"
 			}
 		}
@@ -177,6 +313,28 @@
 	},
 	"file_history":
 	[
+		"/D/Developers Shit/Box2D &SFML/repo/libs/Box2D/Dynamics/b2Body.h",
+		"/D/Developers Shit/Box2D &SFML/repo/GameScripts/Pillar.h",
+		"/D/Developers Shit/Box2D &SFML/repo/GalaxyBox.sublime-project",
+		"/C/MinGW/lib/gcc/x86_64-w64-mingw32/6.1.0/include/c++/functional",
+		"/D/Developers Shit/Box2D &SFML/repo/libs/SFML/System/Thread.hpp",
+		"/D/Developers Shit/Box2D &SFML/repo/GameScripts/WindowController.cpp",
+		"/D/Developers Shit/Box2D &SFML/repo/GameScripts/GalaxyBox.h",
+		"/D/Developers Shit/Box2D &SFML/repo/GameScripts/PlayerController,cpp",
+		"/D/UNI/Game Physics/Tutorials/GPhyLab04b_Box2DInSFML/Box2DinSFML.cpp",
+		"/D/UNI/Game Physics/Tutorials/GPhyLab04b_Box2DInSFML/MyRectangle.h",
+		"/D/UNI/Game Physics/Tutorials/GPhyLab04b_Box2DInSFML/MyRectangle.cpp",
+		"/D/Developers Shit/Box2D &SFML/repo/GameScripts/Pillar..cpp",
+		"/D/Developers Shit/Box2D &SFML/repo/GameScripts/CharacterController.h",
+		"/D/Developers Shit/Box2D &SFML/repo/GameScripts/CharacterController.cpp",
+		"/D/Developers Shit/Box2D &SFML/repo/GameScripts/WindowController.h",
+		"/D/Developers Shit/Box2D &SFML/repo/GameScripts/GameWorld.h",
+		"/D/Developers Shit/Box2D &SFML/repo/GameScripts/GameWorld.cpp",
+		"/D/Developers Shit/Box2D &SFML/repo/GameScripts/CharacterCreator.cpp",
+		"/D/Developers Shit/Box2D &SFML/repo/GameScripts/CharacterCreator.h",
+		"/D/Developers Shit/Box2D &SFML/repo/libs/Box2D/Dynamics/b2World.h",
+		"/D/Developers Shit/Box2D &SFML/repo/libs/Box2D/Box2D.h",
+		"/D/Developers Shit/Box2D &SFML/repo/GameConstants.h",
 		"/D/Developers Shit/Box2D/GalaxyBox/GalaxyBox.sublime-project",
 		"/D/Developers Shit/Box2D/GalaxyBox/libs/Box2D/Collision/b2BroadPhase.h",
 		"/C/Users/sam0f/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
@@ -224,9 +382,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -234,6 +393,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"GameScripts/",
+			"gameController",
+			"getShape",
+			"GameWorld",
+			"CharacterCreator",
+			"const",
+			"gameWindowBorderSize",
+			"gameWindowSizeY",
+			"gameWindowSizeX",
 			"window",
 			"std::",
 			"MyRectangle",
@@ -246,6 +414,15 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
+			"gameWorld",
+			"GetShape",
+			"WorldController",
+			"CharacterController",
+			"static const",
+			"WINDOW_BORDER_SIZE",
+			"WINDOW_SIZE_Y",
+			"WINDOW_SIZE_X",
 			"gameWindow",
 			"",
 			"CharacterCreator",
@@ -260,24 +437,99 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "GalaxyBox.cpp",
+					"file": "GameScripts/GameConstants.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5676,
+						"buffer_size": 886,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								615,
-								615
+								404,
+								404
+							]
+						],
+						"settings":
+						{
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								224,
+								8,
+								23,
+								22,
+								30,
+								25,
+								4,
+								188,
+								222,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 133.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "GalaxyBox.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1735,
+								1735
 							]
 						],
 						"settings":
@@ -333,107 +585,33 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "GameScripts/CharacterCreator.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1512,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								625,
-								625
-							]
-						],
-						"settings":
-						{
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								224,
-								8,
-								21,
-								20,
-								25,
-								32,
-								8,
-								134,
-								185,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"syntax": "Packages/C++ Starting Kit/C++.tmLanguage"
-						},
 						"translation.x": 0.0,
-						"translation.y": 57.0,
+						"translation.y": 1107.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "GameScripts/CharacterCreator.h",
+					"file": "GameScripts/PlayerController.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 585,
+						"buffer_size": 510,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								84,
-								84
+								285,
+								285
 							]
 						],
 						"settings":
 						{
+							"auto_name": "",
 							"c_time":
 							[
 								128,
@@ -464,166 +642,13 @@
 								7,
 								224,
 								8,
-								21,
-								20,
-								25,
-								32,
-								8,
-								134,
-								185,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"syntax": "Packages/C++ Starting Kit/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 114.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "GameScripts/WindowController.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 751,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								457,
-								457
-							]
-						],
-						"settings":
-						{
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								224,
-								8,
-								21,
-								17,
 								24,
-								3,
-								4,
-								85,
-								202,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"syntax": "Packages/C++ Starting Kit/C++.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 114.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "GameScripts/WindowController.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 375,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								184,
-								184
-							]
-						],
-						"settings":
-						{
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								224,
-								8,
-								21,
-								19,
-								10,
-								14,
-								10,
-								147,
-								74,
+								20,
+								57,
+								20,
+								5,
+								68,
+								56,
 								113,
 								1,
 								133,
@@ -640,7 +665,609 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "GameScripts/PlayerController.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1730,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1536,
+								1536
+							]
+						],
+						"settings":
+						{
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								224,
+								8,
+								24,
+								20,
+								58,
+								46,
+								15,
+								31,
+								82,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/C++ Starting Kit/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 986.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "GameScripts/CharacterController.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								430,
+								430
+							]
+						],
+						"settings":
+						{
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								224,
+								8,
+								22,
+								5,
+								3,
+								29,
+								5,
+								224,
+								78,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 296.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "GameScripts/CharacterController.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2861,
+								2861
+							]
+						],
+						"settings":
+						{
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								224,
+								8,
+								22,
+								5,
+								3,
+								29,
+								5,
+								222,
+								86,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/C++ Starting Kit/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1400.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "GameScripts/Pillar.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 565,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								395,
+								395
+							]
+						],
+						"settings":
+						{
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								224,
+								8,
+								24,
+								16,
+								41,
+								35,
+								11,
+								79,
+								87,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 114.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "GameScripts/Pillar.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 484,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								264,
+								264
+							]
+						],
+						"settings":
+						{
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								224,
+								8,
+								24,
+								16,
+								41,
+								57,
+								8,
+								16,
+								184,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/C++ Starting Kit/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 49.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "GameScripts/WorldController.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								157,
+								157
+							]
+						],
+						"settings":
+						{
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								224,
+								8,
+								24,
+								0,
+								32,
+								26,
+								13,
+								12,
+								177,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 114.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "GameScripts/WorldController.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1355,
+								1355
+							]
+						],
+						"settings":
+						{
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								224,
+								8,
+								24,
+								0,
+								31,
+								33,
+								3,
+								204,
+								40,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/C++ Starting Kit/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 684.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "GameScripts/GalaxyBox.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 301,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								187,
+								187
+							]
+						],
+						"settings":
+						{
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								224,
+								8,
+								24,
+								21,
+								20,
+								23,
+								8,
+								140,
+								11,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
@@ -683,7 +1310,7 @@
 	},
 	"output.exec":
 	{
-		"height": 149.0
+		"height": 203.0
 	},
 	"output.find_results":
 	{

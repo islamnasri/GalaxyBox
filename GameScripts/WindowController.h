@@ -4,22 +4,27 @@
 
 
 #include <iostream>
+#include <SFML/Graphics.hpp>
 
 using namespace std;
+using namespace sf;
 
 namespace GalaxyBox
 {
-  class WindowC
+  class WindowController
   {
   protected:
   	RenderWindow GameWindow;
-  	const int windowSizeX = 800, windowSizeY = 600;
-   	const int windowBorderSize = 16;
 
   public:
     void InitWindow();
     void Draw(const Drawable &obj);
+    void Begin();
+    bool IsRunning();
     void Update();
+    void End();
+    RenderWindow& Get();
   };
 }
+
 #endif
