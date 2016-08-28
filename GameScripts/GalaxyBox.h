@@ -11,5 +11,6 @@
 #include "GameConstants.h"
 #include "PlayerController.h"
 #include "Pillar.h"
+#include "Ball.h"
 
 #endif

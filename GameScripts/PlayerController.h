@@ -14,7 +14,7 @@ namespace GalaxyBox
 		protected:
 			float borderSize = 8;
 			float distanceFromCenter = 5;
-			float timeToUpdateBlock = 2;
+			float timeToUpdateBlock = 0.5f;
 			float lerpSpeed = 0.2f;
 			Pillar RBlock, LBlock, TBlock, BBlock;
 
@@ -22,7 +22,7 @@ namespace GalaxyBox
 			PlayerController(b2World& world);
 			void DrawBlocks(WindowController& gameWindow);
 			void Update();
-			void ControlRBlock();
+			void ControlBlock(Pillar& block, string direction);
 	};
 }
 

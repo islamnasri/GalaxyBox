@@ -21,6 +21,14 @@ void WindowController::InitWindow()
   GameWindow.clear(Color(100, 149, 237)); // CORNFLOWER BLUE!
 
   GameWindow.setPosition(Vector2i(50,50));
+  
+  //backgroundTex = new Texture();
+  //backgroundTex->loadFromFile(RESOURCES_IMAGES[1]);
+  //bg = RectangleShape();
+  //bg.setTexture(backgroundTex);
+  //bg.setSize(Vector2f(100,100));
+  //bg.setTextureRect(IntRect(0,0,100,100));
+  //bg.setPosition(0,0);
 }
 
 void WindowController::Draw(const Drawable &obj)
@@ -60,6 +68,7 @@ void WindowController::Update()
 
 void WindowController::End()
 {
+    //GameWindow.draw(bg);
     GameWindow.display();
 }
 

@@ -11,19 +11,21 @@ using namespace sf;
 
 namespace GalaxyBox
 {
-  class WindowController
-  {
-  protected:
-  	RenderWindow GameWindow;
+    class WindowController
+    {
+      protected:
+      	RenderWindow GameWindow;
+        Texture* backgroundTex;
+        RectangleShape bg;
 
-  public:
-    void InitWindow();
-    void Draw(const Drawable &obj);
-    void Begin();
-    bool IsRunning();
-    void Update();
-    void End();
-    RenderWindow& Get();
+      public:
+        void InitWindow();
+        void Draw(const Drawable &obj);
+        void Begin();
+        bool IsRunning();
+        void Update();
+        void End();
+        RenderWindow& Get();
   };
 }
 

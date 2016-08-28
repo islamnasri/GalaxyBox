@@ -5,6 +5,9 @@
 #include <SFML\Graphics.hpp>
 #include <Box2D\Box2D.h>
 #include <windows.h>
+#include <array>
+
+using namespace std;
 
 namespace GalaxyBox
 {
@@ -28,6 +31,17 @@ namespace GalaxyBox
 	static const float Y_AXIS_GRAVITY = 0.0f;
 
 	static const b2Vec2 gravity(X_AXIS_GRAVITY,Y_AXIS_GRAVITY);
+
+	static const array<string,2> RESOURCES_IMAGES = { "Resources/ball.png", "Resources/bg.png" };
+
+	enum OBJECT_TYPES 
+	{
+		Player,
+		Wall,
+		SpeedBooster,
+		DirectionInverter,
+		Killer
+	};
 }
 
 #endif

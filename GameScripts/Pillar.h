@@ -13,22 +13,19 @@ namespace GalaxyBox
 	class Pillar : public CharacterController
 	{
 		protected:
-  			Vector2f size;
-
 
 		public:
 			// Abstract Variables
-  			Vector2f pos;
-  			b2Vec2 nextPos;
-  			b2Vec2 velocity;
 			bool move = false;
 			bool moveFromCenter = true;
 			float timer = 0;
+			b2Vec2 nextPos;
 
 			// Functions
 			Pillar();
 			Pillar(Vector2f size, Vector2f position);
 			void CreatePillar(b2World& world, bool dynamic = false);
+			void MakeRectangleVisual(Vector2f size, Color fillColor, Color outlineColor, float thickness);
 
 	};
 }

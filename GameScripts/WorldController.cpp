@@ -65,8 +65,8 @@ bool WorldController::UpdateWorld(b2World& world)
 
 void WorldController::DrawBorders(WindowController& gameWindow)
 {
-	gameWindow.Draw(   topBorder.GetShape());
-    gameWindow.Draw(bottomBorder.GetShape());
-    gameWindow.Draw(  leftBorder.GetShape());
-    gameWindow.Draw( rightBorder.GetShape());
+	gameWindow.Draw(   topBorder.GetRectangle());
+    gameWindow.Draw(bottomBorder.GetRectangle());
+    gameWindow.Draw(  leftBorder.GetRectangle());
+    gameWindow.Draw( rightBorder.GetRectangle());
 }
