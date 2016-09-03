@@ -7,6 +7,8 @@
 #include <windows.h>
 #include <array>
 
+//#include "Ball.h"
+
 using namespace std;
 
 namespace GalaxyBox
@@ -32,15 +34,37 @@ namespace GalaxyBox
 
 	static const b2Vec2 gravity(X_AXIS_GRAVITY,Y_AXIS_GRAVITY);
 
-	static const array<string,2> RESOURCES_IMAGES = { "Resources/ball.png", "Resources/bg.png" };
 
+	static const array<string,5> RESOURCES_IMAGES = 
+	{
+	 "Resources/ball.png", 
+	 "Resources/bg.jpg",
+	 "Resources/speed.jpg",
+	 "Resources/invert.jpg",
+	 "Resources/kill.jpg"
+	};
+	
+	static const array<string,5> RESOURCES_FONTS = 
+	{
+		"Resources/sensation.ttf"
+	};
+	
 	enum OBJECT_TYPES 
 	{
-		Player,
-		Wall,
-		SpeedBooster,
-		DirectionInverter,
-		Killer
+		Player = 0,
+		Wall = 1,
+		SpeedBooster = 2,
+		DirectionInverter = 3,
+		Killer = 4
+	};
+
+	static const array<string,5> TYPE = 
+	{
+		"Player",
+		"Wall",
+		"SpeedBooster",
+		"DirectionInverter",
+		"Killer"
 	};
 }
 

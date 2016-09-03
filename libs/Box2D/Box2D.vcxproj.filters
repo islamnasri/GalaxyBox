@@ -287,14 +287,14 @@
     <CustomBuild Include="C:\Box2D\Box2D\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Collision\Shapes">
+      <UniqueIdentifier>{92A8764C-B9EA-3007-B484-373D91B48C28}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Dynamics\Contacts">
       <UniqueIdentifier>{D675848C-232B-3DC7-BAD6-97B00492010D}</UniqueIdentifier>
     </Filter>
     <Filter Include="Dynamics\Joints">
       <UniqueIdentifier>{44346D51-657A-37F5-97F1-CB61229E0EC5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Collision\Shapes">
-      <UniqueIdentifier>{92A8764C-B9EA-3007-B484-373D91B48C28}</UniqueIdentifier>
     </Filter>
     <Filter Include="Collision">
       <UniqueIdentifier>{70A0D166-BD37-36A8-B3E9-042726CDC400}</UniqueIdentifier>

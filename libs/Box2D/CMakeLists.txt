@@ -7,6 +7,7 @@ set(BOX2D_Collision_SRCS
 	Collision/b2Distance.cpp
 	Collision/b2DynamicTree.cpp
 	Collision/b2TimeOfImpact.cpp
+	Collision/b2Character.cpp
 )
 set(BOX2D_Collision_HDRS
 	Collision/b2BroadPhase.h
@@ -14,6 +15,7 @@ set(BOX2D_Collision_HDRS
 	Collision/b2Distance.h
 	Collision/b2DynamicTree.h
 	Collision/b2TimeOfImpact.h
+	Collision/b2Character.h
 )
 set(BOX2D_Shapes_SRCS
 	Collision/Shapes/b2CircleShape.cpp

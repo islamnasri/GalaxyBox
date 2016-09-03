@@ -30,10 +30,10 @@ PlayerController::PlayerController(b2World& world)
 
 void PlayerController::DrawBlocks(WindowController& gameWindow)
 {
-	gameWindow.Draw(TBlock.GetRectangle());
-    gameWindow.Draw(BBlock.GetRectangle());
-    gameWindow.Draw(LBlock.GetRectangle());
-    gameWindow.Draw(RBlock.GetRectangle());
+	TBlock.DrawShape(gameWindow);
+    BBlock.DrawShape(gameWindow);
+    LBlock.DrawShape(gameWindow);
+    RBlock.DrawShape(gameWindow);
 }
 
 void PlayerController::Update()

@@ -24,6 +24,7 @@ namespace GalaxyBox
 			// Functions
 			Pillar();
 			Pillar(Vector2f size, Vector2f position);
+			void Update();
 			void CreatePillar(b2World& world, bool dynamic = false);
 			void MakeRectangleVisual(Vector2f size, Color fillColor, Color outlineColor, float thickness);
 

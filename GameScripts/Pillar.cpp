@@ -20,13 +20,11 @@ Pillar::Pillar(Vector2f size, Vector2f pos)
 
     this->pos = pos;
 
-	type = Wall;
+	this->type = TYPE[Wall];
 }
 
 void Pillar::CreatePillar(b2World& world, bool dynamic)
 {	
-    bodyFixtureDef.restitution = 0.2f;
-
 	MakeShapePhysics(size, pos, world, 0.0, dynamic);
 
 	body->SetFixedRotation(true);
@@ -45,4 +43,12 @@ void Pillar::MakeRectangleVisual(Vector2f size, Color fillColor, Color outlineCo
 	rect.setFillColor(fillColor);
 	rect.setOutlineThickness(thickness);
 	rect.setOutlineColor(outlineColor);
+}
+
+void Pillar::Update()
+{
+	// Box2D uses radians for rotation, SFML uses degree
+    rect.setRotation( body->GetAngle() * 180/b2_pi );
+    // Get meters in Box2D scale and multiply by the no. of pixels_per_meter to pixels for SFML objects.
+    rect.setPosition( body->GetPosition().x*PIXEL_PER_METER, body->GetPosition().y*PIXEL_PER_METER );
 }

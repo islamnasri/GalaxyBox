@@ -1,12 +1,16 @@
 #include <SFML\Graphics.hpp>
 #include <Box2D\Box2D.h>
-#include "GameConstants.h"
 #include "WorldController.h"
-#include "WindowController.h"
-#include "Pillar.h"
+#include "Ball.h"
+#include "ContactListener.h"
+#include <vector>
+#include <ctime>
 
+using namespace std;
 using namespace sf;
 using namespace GalaxyBox;
+
+vector<Ball> WorldController::OBJECTS_LIST;
 
 
 WorldController::WorldController() 
@@ -47,7 +51,7 @@ bool WorldController::UpdateWorld(b2World& world)
 		//update frequency
 		//velocityIterations
 	    //positionIterations
-	    world.Step(FIXED_TIME_STEP, 8, 3);
+	    world.Step(FIXED_TIME_STEP, 8, 2);
 
 	    // Update borders
 		topBorder.Update();
@@ -63,10 +67,62 @@ bool WorldController::UpdateWorld(b2World& world)
     return false;
 }
 
-void WorldController::DrawBorders(WindowController& gameWindow)
+void WorldController::DrawWorld(WindowController& gameWindow)
 {
-	gameWindow.Draw(   topBorder.GetRectangle());
-    gameWindow.Draw(bottomBorder.GetRectangle());
-    gameWindow.Draw(  leftBorder.GetRectangle());
-    gameWindow.Draw( rightBorder.GetRectangle());
+	for (int i = 0; i < OBJECTS_LIST.size(); i++)
+      OBJECTS_LIST[i].DrawShape(gameWindow);
+
+	topBorder.DrawShape(gameWindow);
+    bottomBorder.DrawShape(gameWindow);
+    leftBorder.DrawShape(gameWindow);
+    rightBorder.DrawShape(gameWindow);
+}
+
+void WorldController::GenerateWorldObjects(b2World& world, int noOfSpeedObjects, int noOfKillerObjects)
+{
+	//srand(time(NULL));
+	Vector2f pos(SCREEN_CENTER_X, SCREEN_CENTER_Y);
+	Vector2f ballSize(25,25);
+
+	Ball gameBall(0, ballSize, pos, 25, TYPE[Player], world);
+	gameBall.velocity.Set( (rand() % 10) - 5, (rand() % 20) - 10);
+	gameBall.isSpeedConstant = true;
+
+	OBJECTS_LIST.push_back(gameBall);
+
+	pos = Vector2f(SCREEN_CENTER_X - 200, SCREEN_CENTER_Y);
+  	ballSize = Vector2f(25,25);
+
+  	for (int i = 0; i < noOfSpeedObjects; i++)
+	{
+		Ball ball(2, ballSize, pos, ballSize.x, TYPE[SpeedBooster],world);
+		ball.velocity.Set( (rand() % 5) - 2, (rand() % 5) - 2);
+		ball.ApplyVelocity(ball.velocity);
+
+		OBJECTS_LIST.push_back(ball);
+	}
+
+	pos = Vector2f(SCREEN_CENTER_X, 100);
+	ballSize = Vector2f(20,20);
+
+	for (int i = 0; i < noOfKillerObjects; i++)
+	{
+		Ball ball(4, ballSize, pos, ballSize.x, TYPE[Killer],world);
+  		ball.velocity.Set( (rand() % 5) - 2, (rand() % 5) - 2);
+
+  		OBJECTS_LIST.push_back(ball);
+
+	}
+
+}
+
+void WorldController::AddElement(Ball& c)
+{
+  	OBJECTS_LIST.push_back(c);
+}
+
+void WorldController::UpdateElements()
+{
+	for (int i = 0; i < OBJECTS_LIST.size(); i++)
+          OBJECTS_LIST[i].Update();
 }

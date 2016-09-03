@@ -12,5 +12,6 @@
 #include "PlayerController.h"
 #include "Pillar.h"
 #include "Ball.h"
+#include "ContactListener.h"
 
 #endif

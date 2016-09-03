@@ -21,6 +21,8 @@
 
 #include <Box2D/Common/b2Math.h>
 #include <Box2D/Collision/Shapes/b2Shape.h>
+#include <Box2D/Collision/b2Character.h>
+#include <string>
 #include <memory>
 
 class b2Fixture;
@@ -28,6 +30,7 @@ class b2Joint;
 class b2Contact;
 class b2Controller;
 class b2World;
+class b2Character;
 struct b2FixtureDef;
 struct b2JointEdge;
 struct b2ContactEdge;
@@ -120,12 +123,17 @@ struct b2BodyDef
 
 	/// Scale the gravity applied to this body.
 	float32 gravityScale;
+
 };
 
 /// A rigid body. These are created via b2World::CreateBody.
 class b2Body
 {
 public:
+	// Character refered to in collisions (must be set after body is created)
+	b2Character* character;
+	
+	//std::string tag;
 	/// Creates a fixture and attach it to this body. Use this function if you need
 	/// to set some fixture parameters, like friction. Otherwise you can create the
 	/// fixture directly from a shape.

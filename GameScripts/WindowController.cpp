@@ -11,7 +11,7 @@ using namespace GalaxyBox;
 void WindowController::InitWindow()
 {
    // Window creation
-   GameWindow.create(VideoMode(WINDOW_SIZE_X, WINDOW_SIZE_Y), "SFML with Box2D");
+   GameWindow.create(VideoMode(WINDOW_SIZE_X, WINDOW_SIZE_Y), "Time Box");
 
   // Set vSync to true (and as a result, we have a cap of 60FPS)
   GameWindow.setVerticalSyncEnabled(true);

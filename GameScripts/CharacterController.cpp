@@ -12,23 +12,33 @@ using namespace std;
 using namespace sf;
 using namespace GalaxyBox;
 
+CharacterController::CharacterController()
+{
+
+}
+
+CharacterController::~CharacterController()
+{
+	//body->GetWorld()->DestroyBody(body);
+}
+
 void CharacterController::MakeShapePhysics(Vector2f size, Vector2f& position,  b2World& world, float rotation, bool isDynamic, bool isRectangle, float radius )
 {	
-
 	// Box2D
+	b2BodyDef bodyDef;
+	b2FixtureDef bodyFixtureDef;
+
 	// Define body attributes.
 	bodyDef.position = b2Vec2(position.x / PIXEL_PER_METER, position.y / PIXEL_PER_METER);
 	position = Vector2f(bodyDef.position.x, bodyDef.position.y);
 
 
    if (isDynamic)
-   {
-      bodyDef.type = b2_dynamicBody;
-   }
+      bodyDef.type = b2_dynamicBody; // b2_kinematicBody
    else  
-   {
       bodyDef.type = b2_staticBody;
-   }
+
+  	this->isRectangle = isRectangle;
 
    	// Define body look.
    if (isRectangle)
@@ -49,24 +59,25 @@ void CharacterController::MakeShapePhysics(Vector2f size, Vector2f& position,  b
 		bodyFixtureDef.friction = 0;
     	bodyFixtureDef.restitution = 0.8f;
    }
-
 	
+   	bodyFixtureDef.userData = this;
+   	bodyDef.userData = this;
 
-	// Cobine all into one body.
+	// Combine all into one body.
 	body = world.CreateBody(&bodyDef);
-	body->SetUserData(this);// crash
+
+   	body->character = this;
+
+   	body->SetUserData(this);
+   	
+	//body->tag = type;
+	// Create fixture for collisions
 	body->CreateFixture(&bodyFixtureDef);
 }
 
-void CharacterController::Update()
-{
+void CharacterController::Update() { }
 
-	// Box2D uses radians for rotation, SFML uses degree
-    rect.setRotation( body->GetAngle() * 180/b2_pi );
-    // Get meters in Box2D scale and multiply by the no. of pixels_per_meter to pixels for SFML objects.
-    rect.setPosition( body->GetPosition().x*PIXEL_PER_METER, body->GetPosition().y*PIXEL_PER_METER );
-
-}
+void CharacterController::CheckCollision() { }
 
 void CharacterController::Lerp(b2Vec2 nextPos , float lerpRate, bool& keepMoving)
 {
@@ -82,6 +93,7 @@ void CharacterController::Lerp(b2Vec2 nextPos , float lerpRate, bool& keepMoving
 	//cout << " Next Position   " << nextPos.x << " __" << nextPos.y << endl;
 	//cout << " Difference is  " << abs(newPos.x - nextPos.x) << endl << endl;
 
+   	// Condionize for dynamic bodies and static ones
 	body->SetTransform(newPos, body->GetAngle());
 	
 	if (abs(newPos.x - nextPos.x) < 0.1f &&  abs(newPos.y - nextPos.y) < 0.1f)
@@ -92,12 +104,25 @@ void CharacterController::Lerp(b2Vec2 nextPos , float lerpRate, bool& keepMoving
 
 }
 
-Shape& CharacterController::GetRectangle()
+void CharacterController::ApplyVelocity(b2Vec2 velo)
 {
-	return rect;
+	if (body->GetLinearVelocity().x < 0)
+		velo.Set(velo.x * -1, velo.y);
+	else
+		velo.Set(abs(velo.x), velo.y);
+
+	if (body->GetLinearVelocity().y < 0)
+		velo.Set(velo.x, velo.y * -1);
+	else
+		velo.Set(velo.x, abs(velo.y));
+
+	body->SetLinearVelocity(velo);
 }
 
-Shape& CharacterController::GetCircle()
+void CharacterController::DrawShape(WindowController& gameWindow)
 {
-	return circle;
+	if (isRectangle)
+    	gameWindow.Draw(rect);
+    else
+    	gameWindow.Draw(circle);
 }
