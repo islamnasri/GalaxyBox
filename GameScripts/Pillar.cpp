@@ -29,7 +29,7 @@ void Pillar::CreatePillar(b2World& world, bool dynamic)
 
 	body->SetFixedRotation(true);
 
-    MakeRectangleVisual(size, Color::White, Color::Black, -1);
+    MakeRectangleVisual(size, Color::Magenta, Color::Magenta, -1);
 }
 
 

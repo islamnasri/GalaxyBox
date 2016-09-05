@@ -53,8 +53,8 @@ void WindowController::Begin()
       // READ SFML DOCUMENTATION!
         if(event.type == Event::Closed)
         {
-          GameWindow.close();
-          cout << "Closing Window" << endl;
+          //GameWindow.close();
+          //cout << "Closing Window" << endl;
           //system("pause");
         }
     }  

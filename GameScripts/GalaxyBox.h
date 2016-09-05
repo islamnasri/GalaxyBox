@@ -11,7 +11,7 @@
 #include "GameConstants.h"
 #include "PlayerController.h"
 #include "Pillar.h"
-#include "Ball.h"
+#include "Square.h"
 #include "ContactListener.h"
 
 #endif

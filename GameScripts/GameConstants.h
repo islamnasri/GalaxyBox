@@ -10,6 +10,7 @@
 //#include "Ball.h"
 
 using namespace std;
+using namespace sf;
 
 namespace GalaxyBox
 {
@@ -26,14 +27,17 @@ namespace GalaxyBox
 	// You can say the less it goes the heavier the object.
 	static const float PIXEL_PER_METER = 32;
 
-	static const float FIXED_TIME_STEP = 0.02f; // 50 times per second
+	static float FIXED_TIME_STEP = 0.02f; // 50 times per second
 
 	static const float X_AXIS_GRAVITY = 0.0f;
 
-	static const float Y_AXIS_GRAVITY = 0.0f;
+	static const float Y_AXIS_GRAVITY = 9.81f;
+
+	static float WORLD_VELOCITY_RATE = 8;
+
+	static float WORLD_POSITION_RATE = 6;
 
 	static const b2Vec2 gravity(X_AXIS_GRAVITY,Y_AXIS_GRAVITY);
-
 
 	static const array<string,5> RESOURCES_IMAGES = 
 	{
@@ -46,25 +50,25 @@ namespace GalaxyBox
 	
 	static const array<string,5> RESOURCES_FONTS = 
 	{
-		"Resources/sensation.ttf"
+		"Resources/04b03.ttf"
 	};
+
+	static Font GLOBAL_FONT;
 	
 	enum OBJECT_TYPES 
 	{
 		Player = 0,
 		Wall = 1,
-		SpeedBooster = 2,
-		DirectionInverter = 3,
-		Killer = 4
+		AgeUp = 2,
+		AgeDown = 3,
 	};
 
-	static const array<string,5> TYPE = 
+	static const array<string,4> TYPE = 
 	{
 		"Player",
 		"Wall",
-		"SpeedBooster",
-		"DirectionInverter",
-		"Killer"
+		"AgeUp",
+		"AgeDown",
 	};
 }
 

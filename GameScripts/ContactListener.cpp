@@ -6,7 +6,6 @@
 #include <cmath>
 #include <ctime>
 
-#include "Ball.h"
 #include "WindowController.h"
 #include "GameConstants.h"
 #include "ContactListener.h"

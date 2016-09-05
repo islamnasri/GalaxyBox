@@ -19,15 +19,15 @@ namespace GalaxyBox
 	class CharacterController : public b2Character
 	{
 	 protected:
-		RectangleShape rect;
-		CircleShape circle;
-		b2Body* body;
 		b2PolygonShape bodyShapeRectangle;
 		b2CircleShape bodyShapeCircle;
+		RectangleShape rect;
+		CircleShape circle;
   		Vector2f size;
 
 	 public:
 	 	// Abstract Attributes
+		b2Body* body;
 	 	Vector2f pos;
   		b2Vec2 velocity;
   		string type;
@@ -44,6 +44,7 @@ namespace GalaxyBox
 		void Lerp(b2Vec2 nextPos, float lerpRate, bool& done);
 		void ApplyVelocity(b2Vec2 velo);
 		void DrawShape(WindowController& gameWindow);
+		Shape& GetShape();
 	};
 }
 #endif

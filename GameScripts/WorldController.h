@@ -7,7 +7,7 @@
 #include <vector>
 #include <array>
 #include "Pillar.h"
-#include "Ball.h"
+#include "Square.h"
 #include "CharacterController.h"
 
 using namespace std;
@@ -20,20 +20,31 @@ namespace GalaxyBox
 		     float timeElapsedSinceLastFrame;
 		     float borderSize;
 		     Pillar topBorder, bottomBorder, leftBorder, rightBorder;
-		     
+		     float slowMoTime = FIXED_TIME_STEP - 0.01f;
+		     float regularTime = FIXED_TIME_STEP;
+		     float timeStepRate = 0.01f;
+		     float buttonPressTimer = 0;
+		     float platformSpawnTimer = 1000;
+		     int const noOfPlatforms = 5;
+  			 Text text;
+
 
 		public:
 			// Abstract Variables
-			static vector<Ball> OBJECTS_LIST;
+			vector<Square> platformList;
+  			int slowMoTimer = 200;
 
+		     // Machine States
+		     bool slowMo = false;
+		     
 			// Functions
 			WorldController();
 			bool UpdateWorld(b2World& world);
 			void InitBorders(b2World& world);
-			void GenerateWorldObjects(b2World& world, int noOfSpeedObjects = 1, int noOfKillerObjects = 1);
+			void GeneratePlatforms(b2World& world);
 			void DrawWorld(WindowController& gameWindow);
-			void AddElement(Ball& c);
-			void UpdateElements();
+			void UpdateElements(RenderWindow& window);
+			void CheckPlatformType();
 	};
 }
 

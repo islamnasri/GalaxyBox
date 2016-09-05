@@ -36,7 +36,7 @@ void CharacterController::MakeShapePhysics(Vector2f size, Vector2f& position,  b
    if (isDynamic)
       bodyDef.type = b2_dynamicBody; // b2_kinematicBody
    else  
-      bodyDef.type = b2_staticBody;
+      bodyDef.type = b2_kinematicBody; // b2_staticBody;
 
   	this->isRectangle = isRectangle;
 
@@ -46,9 +46,18 @@ void CharacterController::MakeShapePhysics(Vector2f size, Vector2f& position,  b
 		bodyShapeRectangle.SetAsBox((size.x/2)/PIXEL_PER_METER, (size.y/2)/PIXEL_PER_METER);
 		bodyFixtureDef.shape = &bodyShapeRectangle;
 		// Define body personality.
-		bodyFixtureDef.density = 0.3f;
+    	bodyFixtureDef.restitution = 0.3f;
+		if (type == TYPE[AgeUp])
+			bodyFixtureDef.density = 0.4f;
+		else if (type == TYPE[AgeDown])
+			bodyFixtureDef.density = 0.3f;
+		else
+		{
+    		bodyFixtureDef.restitution = 0.6f;
+			bodyFixtureDef.density = 0.2f;
+		}
+
 		bodyFixtureDef.friction = 0.5f;
-    	bodyFixtureDef.restitution = 0;
    }
    else
    {
@@ -70,7 +79,6 @@ void CharacterController::MakeShapePhysics(Vector2f size, Vector2f& position,  b
 
    	body->SetUserData(this);
    	
-	//body->tag = type;
 	// Create fixture for collisions
 	body->CreateFixture(&bodyFixtureDef);
 }
@@ -125,4 +133,12 @@ void CharacterController::DrawShape(WindowController& gameWindow)
     	gameWindow.Draw(rect);
     else
     	gameWindow.Draw(circle);
+}
+
+Shape& CharacterController::GetShape()
+{
+	if (isRectangle)
+    	return rect;
+    else
+    	return circle;
 }
