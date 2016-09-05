@@ -6,7 +6,7 @@
 
 using namespace std;
 using namespace sf;
-using namespace GalaxyBox;
+using namespace TimeBox;
 
 void WindowController::InitWindow()
 {

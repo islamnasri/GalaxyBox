@@ -9,10 +9,10 @@
 #include "Square.h"
 #include "WindowController.h"
 #include "GameConstants.h"
-#include "ContactListener.h"
+
 
 using namespace std;
-using namespace GalaxyBox;
+using namespace TimeBox;
 
 Square::Square()
 {

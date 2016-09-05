@@ -12,11 +12,11 @@
 #include "GameConstants.h"
 #include "WindowController.h"
 #include "CharacterController.h"
-#include "ContactListener.h"
+
 
 using namespace std;
 
-namespace GalaxyBox
+namespace TimeBox
 {
 	class Square : public CharacterController
 	{

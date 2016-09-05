@@ -8,7 +8,7 @@
 #include <Box2D\Box2D.h>
 #include "CharacterController.h"
 
-namespace GalaxyBox
+namespace TimeBox
 {
 	class Pillar : public CharacterController
 	{

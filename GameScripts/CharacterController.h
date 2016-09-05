@@ -14,7 +14,7 @@
 using namespace std;
 using namespace sf;
 
-namespace GalaxyBox
+namespace TimeBox
 {
 	class CharacterController : public b2Character
 	{

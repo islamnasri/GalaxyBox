@@ -2,7 +2,6 @@
 #include <SFML/Window.hpp>
 #include "CharacterController.h"
 #include "GameConstants.h"
-#include "GalaxyBox.h"
 #include <iostream>
 #include <exception>
 #include <cmath>
@@ -10,7 +9,7 @@
 
 using namespace std;
 using namespace sf;
-using namespace GalaxyBox;
+using namespace TimeBox;
 
 CharacterController::CharacterController()
 {

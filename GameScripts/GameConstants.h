@@ -12,7 +12,7 @@
 using namespace std;
 using namespace sf;
 
-namespace GalaxyBox
+namespace TimeBox
 {
 	static const int WINDOW_SIZE_X = GetSystemMetrics(SM_CXSCREEN)/1.3f;
 

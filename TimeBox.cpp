@@ -7,12 +7,12 @@
 #include <list>
 #include <cstdlib>
 
-#include "GameScripts/GalaxyBox.h"
+#include "TimeBox.h"
 
 
 using namespace std;
 using namespace sf;
-using namespace GalaxyBox;
+using namespace TimeBox;
 
 
 // create the ball that is going to move according to concept.

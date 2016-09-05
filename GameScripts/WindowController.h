@@ -10,7 +10,7 @@
 using namespace std;
 using namespace sf;
 
-namespace GalaxyBox
+namespace TimeBox
 {
     class WindowController
     {

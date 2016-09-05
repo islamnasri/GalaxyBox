@@ -3,11 +3,10 @@
 #include <Box2D\Box2D.h>
 #include "CharacterController.h"
 #include "Pillar.h"
-#include "GalaxyBox.h"
 #include <iostream>
 
 using namespace std;
-using namespace GalaxyBox;
+using namespace TimeBox;
 
 Pillar::Pillar()
 {

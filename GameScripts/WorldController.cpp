@@ -1,7 +1,7 @@
 #include <SFML\Graphics.hpp>
 #include <Box2D\Box2D.h>
 #include "WorldController.h"
-#include "ContactListener.h"
+
 #include "Square.h"
 #include <vector>
 #include <ctime>
@@ -11,7 +11,7 @@
 
 using namespace std;
 using namespace sf;
-using namespace GalaxyBox;
+using namespace TimeBox;
 
 WorldController::WorldController()
 {
