@@ -1,0 +1,51 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"g++",
+				"${file}",
+				"${file_path}\\GameScripts\\*.cpp",
+				"-o",
+				"${file_base_name}",
+				"-I${file_path}\\libs",
+				"-L${file_path}\\static libs",
+				"-lBox2D",
+				"-lopenal32",
+				"-lsfml-main",
+				"-lsfml-system",
+				"-lsfml-window",
+				"-lsfml-graphics",
+				"-lsfml-audio",
+				"-lsfml-network",
+				"-lvorbis",
+				"-lvorbisenc",
+				"-lvorbisfile",
+				"-lFLAC",
+				"-lfreetype",
+				"-ljpeg",
+				"-logg"
+			],
+			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+			"name": "GP C++ Compiler",
+			"selector": "source.c, source.c++, source.cpp",
+			"shell": true,
+			"windows":
+			[
+				{
+					"cmd":
+					[
+						"start",
+						"${file_base_name}"
+					],
+					"name": "Run",
+					"selector": "source.c++, source.cpp",
+					"shell": true,
+					"working_dir": "${file_path}"
+				}
+			],
+			"working_dir": "${file_path}"
+		}
+	]
+}
